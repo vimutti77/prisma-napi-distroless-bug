@@ -13,7 +13,7 @@ COPY prisma /app/prisma
 RUN npx prisma generate
 
 ########## final ##########
-FROM gcr.io/distroless/nodejs18-debian11
+FROM gcr.io/distroless/nodejs18-debian11:debug
 
 # set working directory
 WORKDIR /app/

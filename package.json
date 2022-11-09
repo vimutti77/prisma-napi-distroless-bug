@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "docker build -t test .",
-    "start": "docker run --rm test"
+    "start": "docker run --rm test",
+    "debug": "docker run --rm -ti --entrypoint=sh test",
+    "check_prisma_version": "docker run --rm -ti test /app/node_modules/prisma/build/index.js -v"
   },
   "keywords": [],
   "author": "",
